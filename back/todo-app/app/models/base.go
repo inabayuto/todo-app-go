@@ -33,36 +33,38 @@ func init() {
 	if err != nil {
 		log.Fatalln(err)
 	}
+	/*
+		cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s (
+				id SERIAL PRIMARY KEY,
+				uuid UUID NOT NULL UNIQUE,
+				name VARCHAR(255),
+				email VARCHAR(255),
+				password VARCHAR(255),
+				created_at TIMESTAMP
+				);`, tableNameUser)
 
-	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s (
-			id SERIAL PRIMARY KEY,
-			uuid UUID NOT NULL UNIQUE,
-			name VARCHAR(255),
-			email VARCHAR(255),
-			password VARCHAR(255),
-			created_at TIMESTAMP
-			);`, tableNameUser)
+		_, err := Db.Exec(cmdU)
+		if err != nil {
+			log.Printf("Error creating %s table: %v", tableNameUser, err)
+		}
 
-	_, err := Db.Exec(cmdU)
-	if err != nil {
-		log.Printf("Error creating %s table: %v", tableNameUser, err)
-	}
+		log.Printf("%s table creation attempted.", tableNameUser)
+	*/
+	/*
+		cmdT := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+				id SERIAL PRIMARY KEY,
+				content TEXT,
+				user_id INTEGER,
+				created_at TIMESTAMP
+				);`, tableNameTodo)
 
-	log.Printf("%s table creation attempted.", tableNameUser)
+		_, err = Db.Exec(cmdT)
+		if err != nil {
+			log.Printf("Error creating %s table: %v", tableNameTodo, err)
+		}
 
-	cmdT := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-			id SERIAL PRIMARY KEY,
-			content TEXT,
-			user_id INTEGER,
-			created_at TIMESTAMP
-			);`, tableNameTodo)
-
-	_, err = Db.Exec(cmdT)
-	if err != nil {
-		log.Printf("Error creating %s table: %v", tableNameTodo, err)
-	}
-
-	log.Printf("%s table creation attempted.", tableNameTodo)
+		log.Printf("%s table creation attempted.", tableNameTodo)
+	*/
 }
 
 func createUUID() (uuidobj uuid.UUID) {

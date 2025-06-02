@@ -38,3 +38,7 @@
 2025/06/02 11:26:32 base.go:65: todos table creation attempted.
 2025/06/02 11:26:42 base.go:51: users table creation attempted.
 2025/06/02 11:26:42 base.go:65: todos table creation attempted.
+2025/06/02 11:31:42 base.go:51: users table creation attempted.
+2025/06/02 11:31:42 base.go:65: todos table creation attempted.
+2025/06/02 11:35:59 base.go:51: users table creation attempted.
+2025/06/02 11:35:59 base.go:65: todos table creation attempted.

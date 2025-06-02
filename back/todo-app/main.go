@@ -84,4 +84,17 @@ func main() {
 		}
 	*/
 
+	/*
+		// Update Todo
+		t, _ := models.GetTodo(1)
+		t.Content = "Update Todo"
+		t.UpdateTodo()
+	*/
+
+	/*
+		// Delete Todo
+		t, _ := models.GetTodo(3)
+		t.DeleteTodo()
+	*/
+
 }
