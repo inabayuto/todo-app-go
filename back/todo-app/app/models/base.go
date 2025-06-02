@@ -1,11 +1,13 @@
 package models
 
 import (
+	"crypto/sha1"
 	"database/sql"
 	"fmt"
 	"log"
 	"todo-app/config"
 
+	"github.com/google/uuid"
 	_ "github.com/lib/pq" // PostgreSQL ドライバーをインポート
 )
 
@@ -15,7 +17,6 @@ var err error
 
 const (
 	tableNameUser = "users"
-	// 他のテーブル名定数もここに追加できます
 )
 
 func init() {
@@ -32,7 +33,7 @@ func init() {
 		log.Fatalln(err)
 	}
 
-	// CreateUsersTable は users テーブルが存在しない場合に作成します。
+	// CreateUsersTable は users テーブルが存在しない場合に作成
 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s (
 		id SERIAL PRIMARY KEY,
 		uuid VARCHAR(255) NOT NULL UNIQUE,
@@ -48,4 +49,14 @@ func init() {
 	}
 
 	log.Printf("%s table creation attempted.", tableNameUser)
+}
+
+func createUUID() (uuidobj uuid.UUID) {
+	uuidobj, _ = uuid.NewUUID()
+	return uuidobj
+}
+
+func Encrypt(plaintext string) (cryptext string) {
+	cryptext = fmt.Sprintf("%x", sha1.Sum([]byte(plaintext)))
+	return cryptext
 }
