@@ -20,3 +20,6 @@
 2025/06/02 10:40:10 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
 2025/06/02 10:40:10 base.go:51: users table creation attempted.
 2025/06/02 10:40:10 base.go:65: todos table creation attempted.
+2025/06/02 11:08:03 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
+2025/06/02 11:08:03 base.go:51: users table creation attempted.
+2025/06/02 11:08:03 base.go:65: todos table creation attempted.

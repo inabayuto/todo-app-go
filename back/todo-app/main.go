@@ -1,7 +1,5 @@
 package main
 
-import "todo-app/app/models"
-
 func main() {
 	/*
 		fmt.Println(config.Config.Port)
@@ -57,7 +55,19 @@ func main() {
 		u, _ = models.GetUser(1)
 		fmt.Println(u)
 	*/
-	u, _ := models.GetUser(2)
-	u.CreateTodo("First Todo")
+
+	/*
+		// Create Todo
+
+		u, _ := models.GetUser(2)
+		u.CreateTodo("First Todo")
+	*/
+
+	/*
+		// Get Todo
+
+		t, _ := models.GetTodo(1)
+		fmt.Println(t)
+	*/
 
 }
