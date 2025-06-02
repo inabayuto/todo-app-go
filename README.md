@@ -45,8 +45,8 @@
     ```bash
     go mod init todo-app
     go get github.com/go-ini/ini
-    github.com/google/uuid
-    github.com/lib/pq
+    go get github.com/google/uuid
+    go get github.com/lib/pq
     ```
 
     *補足: `go mod init todo-app` は通常、プロジェクトを最初にセットアップする際に一度だけ実行します。`go.mod` が既に存在する場合は、`go get` のみで十分な場合があります。
