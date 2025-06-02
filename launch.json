@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "debug on docker",
+            "type": "go",
+            "request": "attach",
+            "mode": "remote",
+            "remotePath": "/go/src/app", //Docker内のソースコード配置するパス。
+            "cwd": "${workspaceRoot}/back", //ホスト環境のソースコード配置するバス
+            "port": 2346,
+            "host": "localhost",
+            "showLog": true
+        }
+    ]
+}

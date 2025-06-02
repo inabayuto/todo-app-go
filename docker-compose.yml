@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  go:
+    container_name: todo-app-go
+    platform: linux/x86_64
+    hostname: localhost
+    tty: true
+    build:
+      context: .
+      dockerfile: ./docker/go/Dockerfile
+    ports:
+      - "2345:2345" #delve用のポート
+    volumes:
+      - ./back:/go/src/app
+    networks:
+      - private-net
+
+  # postgresql
+  postgresql-db:
+    container_name: todo-app-db
+    build:
+      context: .
+      dockerfile: ./docker/postgresql/Dockerfile
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - db-store:/var/lib/postgresql/data
+      - ./back/database/init:/docker-entrypoint-initdb.d # DBを初期化
+    ports:
+      - ${DB_PORT}:5432
+    networks:
+      - private-net
+
+volumes:
+  db-store:
+    driver: local
+
+networks:
+  private-net:
+    driver: bridge
