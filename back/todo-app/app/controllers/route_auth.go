@@ -33,9 +33,41 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		// ユーザー情報をデータベースに保存
 		if err := user.CreateUser(); err != nil {
 			log.Println("Database user creation error:", err)
-
-			// データベース保存の成功・失敗に関わらず、ルートパスにリダイレクト
-			http.Redirect(w, r, "/", http.StatusFound) // 302 は http.StatusFound
+		} else {
+			// ユーザー作成成功時の処理
+			log.Println("User created successfully.") // 成功ログを追加
+			http.Redirect(w, r, "/", http.StatusFound)
 		}
+	}
+}
+
+func login(w http.ResponseWriter, r *http.Request) {
+	generateHTML(w, nil, "layout", "login", "public_navbar")
+}
+
+func authenticate(w http.ResponseWriter, r *http.Request) {
+	err := r.ParseForm()
+	user, err := models.GetUserByEmail(r.PostFormValue("email"))
+	if err != nil {
+		log.Fatalln(err)
+		http.Redirect(w, r, "/", http.StatusFound)
+	}
+
+	if user.PassWord == models.Encrypt(r.PostFormValue("password")) {
+		session, err := user.CreateSession()
+		if err != nil {
+			log.Println(err)
+		}
+
+		cookie := http.Cookie{
+			Name:     "_cookie",
+			Value:    session.UUID,
+			HttpOnly: true,
+		}
+		http.SetCookie(w, &cookie)
+
+		http.Redirect(w, r, "/", 302)
+	} else {
+		http.Redirect(w, r, "/login", 302)
 	}
 }

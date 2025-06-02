@@ -20,7 +20,6 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 
 	// テンプレートファイルをパース
 	// ParseFiles は複数のファイルを読み込み、定義されたテンプレートのセットを作成
-	// template.Must は、ParseFiles がエラーを返した場合にパニックを引き起こします。
 	templates := template.Must(template.ParseFiles(files...))
 
 	// レイアウトテンプレートを基にデータを適用し、レスポンスライターに書き出し
@@ -42,6 +41,12 @@ func StartMainServer() error {
 
 	// ルート ("/signup") へのリクエストを signup ハンドラ関数で処理するように設定
 	http.HandleFunc("/signup", signup)
+
+	// ルート ("/login") へのリクエストを login ハンドラ関数で処理するように設定
+	http.HandleFunc("/login", login)
+
+	// ルート ("/authenticate") へのリクエストを authenticate ハンドラ関数で処理するように設定
+	http.HandleFunc("/authenticate", authenticate)
 
 	// 指定されたポートで HTTP リクエストのリスニングを開始する
 	log.Printf("Starting server on port %s...", config.Config.Port) // サーバー起動ログを追加

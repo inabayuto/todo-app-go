@@ -365,3 +365,45 @@ created by net/http.(*Server).Serve in goroutine 1
 2025/06/02 15:09:38 base.go:53: Database connection established successfully!
 2025/06/02 15:09:38 server.go:47: Starting server on port 8080...
 2025/06/02 15:09:59 users.go:37: User created successfully.
+2025/06/02 15:18:14 base.go:53: Database connection established successfully!
+2025/06/02 15:18:14 server.go:49: Starting server on port 8080...
+2025/06/02 15:18:59 base.go:53: Database connection established successfully!
+2025/06/02 15:18:59 server.go:49: Starting server on port 8080...
+2025/06/02 15:20:17 base.go:53: Database connection established successfully!
+2025/06/02 15:20:17 server.go:49: Starting server on port 8080...
+2025/06/02 15:26:31 base.go:49: Database connection established successfully!
+2025/06/02 15:26:31 base.go:93: Error creating sessions table: pq: 型"string"は存在しません
+2025/06/02 15:26:31 base.go:96: sessions table creation attempted.
+2025/06/02 15:26:31 server.go:49: Starting server on port 8080...
+2025/06/02 15:27:19 base.go:49: Database connection established successfully!
+2025/06/02 15:27:19 base.go:93: Error creating sessions table: pq: 型"datetime"は存在しません
+2025/06/02 15:27:19 base.go:96: sessions table creation attempted.
+2025/06/02 15:27:19 server.go:49: Starting server on port 8080...
+2025/06/02 15:27:34 base.go:49: Database connection established successfully!
+2025/06/02 15:27:34 base.go:96: sessions table creation attempted.
+2025/06/02 15:27:34 server.go:49: Starting server on port 8080...
+2025/06/02 15:33:59 base.go:49: Database connection established successfully!
+2025/06/02 15:33:59 base.go:96: sessions table creation attempted.
+2025/06/02 15:38:38 base.go:49: Database connection established successfully!
+2025/06/02 15:38:38 base.go:96: sessions table creation attempted.
+2025/06/02 15:38:38 users.go:107: pq: リレーション"sessions"の列"id"のNULL値が非NULL制約に違反しています
+2025/06/02 15:38:38 main.go:119: sql: no rows in result set
+2025/06/02 15:42:39 base.go:49: Database connection established successfully!
+2025/06/02 15:42:39 base.go:96: sessions table creation attempted.
+2025/06/02 15:42:39 users.go:107: pq: リレーション"sessions"の列"id"のNULL値が非NULL制約に違反しています
+2025/06/02 15:42:39 main.go:119: sql: no rows in result set
+2025/06/02 15:44:08 base.go:49: Database connection established successfully!
+2025/06/02 15:44:08 base.go:96: sessions table creation attempted.
+2025/06/02 15:44:08 users.go:107: pq: リレーション"sessions"の列"id"のNULL値が非NULL制約に違反しています
+2025/06/02 15:44:08 main.go:119: sql: no rows in result set
+2025/06/02 15:45:09 base.go:49: Database connection established successfully!
+2025/06/02 15:45:09 base.go:96: sessions table creation attempted.
+2025/06/02 15:45:09 users.go:107: pq: リレーション"sessions"の列"id"のNULL値が非NULL制約に違反しています
+2025/06/02 15:45:09 main.go:119: sql: no rows in result set
+2025/06/02 15:47:55 base.go:49: Database connection established successfully!
+2025/06/02 15:47:55 base.go:96: sessions table creation attempted.
+2025/06/02 15:54:58 base.go:49: Database connection established successfully!
+2025/06/02 15:54:58 base.go:96: sessions table creation attempted.
+2025/06/02 16:02:07 base.go:49: Database connection established successfully!
+2025/06/02 16:02:07 base.go:96: sessions table creation attempted.
+2025/06/02 16:02:07 server.go:52: Starting server on port 8080...
