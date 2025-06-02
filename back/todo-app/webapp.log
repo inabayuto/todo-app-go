@@ -14,3 +14,9 @@
 2025/06/02 10:32:15 base.go:63: Error creating todos table: pq: "AUTOINCREMENT"またはその近辺で構文エラー
 2025/06/02 10:32:15 base.go:66: todos table creation attempted.
 2025/06/02 10:33:25 base.go:66: todos table creation attempted.
+2025/06/02 10:38:08 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
+2025/06/02 10:38:08 base.go:51: users table creation attempted.
+2025/06/02 10:38:08 base.go:65: todos table creation attempted.
+2025/06/02 10:40:10 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
+2025/06/02 10:40:10 base.go:51: users table creation attempted.
+2025/06/02 10:40:10 base.go:65: todos table creation attempted.

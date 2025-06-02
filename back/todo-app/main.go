@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"todo-app/app/models"
-)
+import "todo-app/app/models"
 
 func main() {
 	/*
@@ -18,17 +15,19 @@ func main() {
 
 		log.Println("test")
 	*/
+
+	// Create User
 	/*
-		// Create User
-			fmt.Println(models.Db)
+		fmt.Println(models.Db)
 
-			u := &models.User{}
-			u.Name = "test"
-			u.Email = "test@example.com"
-			u.PassWord = "4JpRPxcwrATa"
+		u := &models.User{}
+		u.Name = "test"
+		u.Email = "test@example.com"
+		u.PassWord = "4JpRPxcwrATa"
 
-			u.CreateUser()
+		u.CreateUser()
 	*/
+
 	/*
 		// Get User
 			u, _ := models.GetUser(1)
@@ -58,6 +57,7 @@ func main() {
 		u, _ = models.GetUser(1)
 		fmt.Println(u)
 	*/
-	fmt.Println(models.Db)
+	u, _ := models.GetUser(2)
+	u.CreateTodo("First Todo")
 
 }
