@@ -6,11 +6,11 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"todo-app/app/models"
 	"todo-app/config"
 )
 
 // generateHTML は指定されたテンプレートファイルをパースし、データを適用して HTTP レスポンスライターに書き込む
-// レイアウトテンプレートと他のテンプレートを組み合わせて使用することを想定しています。
 func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) {
 	var files []string
 	for _, file := range filenames {
@@ -20,11 +20,33 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 
 	// テンプレートファイルをパース
 	// ParseFiles は複数のファイルを読み込み、定義されたテンプレートのセットを作成
-	templates := template.Must(template.ParseFiles(files...))
+	templates, err := template.ParseFiles(files...)
+	if err != nil {
+		log.Printf("Template parsing error: %v", err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
 
 	// レイアウトテンプレートを基にデータを適用し、レスポンスライターに書き出し
 	// ここで "layout" という名前のテンプレートがテンプレートセット内に存在する必要
-	templates.ExecuteTemplate(w, "layout", data)
+	err = templates.ExecuteTemplate(w, "layout", data)
+	if err != nil {
+		log.Printf("Template execution error: %v", err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+}
+
+func session(w http.ResponseWriter, r *http.Request) (sess models.Session, err error) {
+	cookie, err := r.Cookie("__cookie__")
+	if err == nil {
+		sess = models.Session{UUID: cookie.Value}
+		if ok, _ := sess.CheckSession(); !ok {
+			err = fmt.Errorf("Invalid session")
+		}
+	}
+	return sess, err
+
 }
 
 // StartMainServer はアプリケーションの Web サーバーを起動
@@ -47,6 +69,10 @@ func StartMainServer() error {
 
 	// ルート ("/authenticate") へのリクエストを authenticate ハンドラ関数で処理するように設定
 	http.HandleFunc("/authenticate", authenticate)
+
+	http.HandleFunc("/logout", logout)
+
+	http.HandleFunc("/todos", index)
 
 	// 指定されたポートで HTTP リクエストのリスニングを開始する
 	log.Printf("Starting server on port %s...", config.Config.Port) // サーバー起動ログを追加
