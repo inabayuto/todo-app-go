@@ -1,0 +1,44 @@
+2025/06/02 06:42:48 main.go:19: test
+2025/06/02 06:55:52 base.go:32: sql: unknown driver "postgres" (forgotten import?)
+2025/06/02 07:07:32 base.go:47: Error creating users table: dial tcp: lookup postgres on 127.0.0.11:53: no such host
+2025/06/02 07:07:32 base.go:50: users table creation attempted.
+2025/06/02 07:13:33 base.go:50: users table creation attempted.
+2025/06/02 07:28:19 base.go:51: users table creation attempted.
+2025/06/02 08:38:05 base.go:51: users table creation attempted.
+2025/06/02 08:43:14 base.go:51: users table creation attempted.
+2025/06/02 10:25:22 base.go:51: users table creation attempted.
+2025/06/02 10:31:07 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
+2025/06/02 10:31:07 base.go:51: users table creation attempted.
+2025/06/02 10:31:07 base.go:62: Error creating todos table: pq: "AUTOINCREMENT"またはその近辺で構文エラー
+2025/06/02 10:31:07 base.go:65: todos table creation attempted.
+2025/06/02 10:32:15 base.go:63: Error creating todos table: pq: "AUTOINCREMENT"またはその近辺で構文エラー
+2025/06/02 10:32:15 base.go:66: todos table creation attempted.
+2025/06/02 10:33:25 base.go:66: todos table creation attempted.
+2025/06/02 10:38:08 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
+2025/06/02 10:38:08 base.go:51: users table creation attempted.
+2025/06/02 10:38:08 base.go:65: todos table creation attempted.
+2025/06/02 10:40:10 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
+2025/06/02 10:40:10 base.go:51: users table creation attempted.
+2025/06/02 10:40:10 base.go:65: todos table creation attempted.
+2025/06/02 11:08:03 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
+2025/06/02 11:08:03 base.go:51: users table creation attempted.
+2025/06/02 11:08:03 base.go:65: todos table creation attempted.
+2025/06/02 11:12:36 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
+2025/06/02 11:12:36 base.go:51: users table creation attempted.
+2025/06/02 11:12:36 base.go:65: todos table creation attempted.
+2025/06/02 11:17:37 base.go:51: users table creation attempted.
+2025/06/02 11:17:37 base.go:65: todos table creation attempted.
+2025/06/02 11:17:49 base.go:51: users table creation attempted.
+2025/06/02 11:17:49 base.go:65: todos table creation attempted.
+2025/06/02 11:23:20 base.go:51: users table creation attempted.
+2025/06/02 11:23:20 base.go:65: todos table creation attempted.
+2025/06/02 11:24:37 base.go:51: users table creation attempted.
+2025/06/02 11:24:37 base.go:65: todos table creation attempted.
+2025/06/02 11:26:32 base.go:51: users table creation attempted.
+2025/06/02 11:26:32 base.go:65: todos table creation attempted.
+2025/06/02 11:26:42 base.go:51: users table creation attempted.
+2025/06/02 11:26:42 base.go:65: todos table creation attempted.
+2025/06/02 11:31:42 base.go:51: users table creation attempted.
+2025/06/02 11:31:42 base.go:65: todos table creation attempted.
+2025/06/02 11:35:59 base.go:51: users table creation attempted.
+2025/06/02 11:35:59 base.go:65: todos table creation attempted.
