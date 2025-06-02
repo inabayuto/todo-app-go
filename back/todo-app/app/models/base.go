@@ -17,6 +17,7 @@ var err error
 
 const (
 	tableNameUser = "users"
+	tableNameTodo = "todos"
 )
 
 func init() {
@@ -33,15 +34,14 @@ func init() {
 		log.Fatalln(err)
 	}
 
-	// CreateUsersTable は users テーブルが存在しない場合に作成
 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s (
-		id SERIAL PRIMARY KEY,
-		uuid VARCHAR(255) NOT NULL UNIQUE,
-		name VARCHAR(255),
-		email VARCHAR(255),
-		password VARCHAR(255),
-		created_at TIMESTAMP
-		);`, tableNameUser)
+			id SERIAL PRIMARY KEY,
+			uuid (255) NOT NULL UNIQUE,
+			name VARCHAR(255),
+			email VARCHAR(255),
+			password VARCHAR(255),
+			created_at TIMESTAMP
+			);`, tableNameUser)
 
 	_, err := Db.Exec(cmdU)
 	if err != nil {
@@ -49,6 +49,20 @@ func init() {
 	}
 
 	log.Printf("%s table creation attempted.", tableNameUser)
+
+	cmdT := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+			id SERIAL PRIMARY KEY,
+			content TEXT,
+			user_id INTEGER,
+			created_at TIMESTAMP
+			);`, tableNameTodo)
+
+	_, err = Db.Exec(cmdT)
+	if err != nil {
+		log.Printf("Error creating %s table: %v", tableNameTodo, err)
+	}
+
+	log.Printf("%s table creation attempted.", tableNameTodo)
 }
 
 func createUUID() (uuidobj uuid.UUID) {

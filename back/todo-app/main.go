@@ -50,11 +50,14 @@ func main() {
 		fmt.Println(u)
 	*/
 
-	// Delete User
-	u, _ := models.GetUser(1)
-	u.DeleteUser()
+	/*
+		// Delete User
+		u, _ := models.GetUser(1)
+		u.DeleteUser()
 
-	u, _ = models.GetUser(1)
-	fmt.Println(u)
+		u, _ = models.GetUser(1)
+		fmt.Println(u)
+	*/
+	fmt.Println(models.Db)
 
 }
