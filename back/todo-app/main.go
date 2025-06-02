@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"todo-app/app/models"
+)
+
 func main() {
 	/*
 		fmt.Println(config.Config.Port)
@@ -30,8 +35,8 @@ func main() {
 			fmt.Println(u)
 	*/
 
-	// Update user
 	/*
+		// Update user
 		u, _ := models.GetUser(1)
 
 		fmt.Println(u)
@@ -44,4 +49,12 @@ func main() {
 
 		fmt.Println(u)
 	*/
+
+	// Delete User
+	u, _ := models.GetUser(1)
+	u.DeleteUser()
+
+	u, _ = models.GetUser(1)
+	fmt.Println(u)
+
 }
