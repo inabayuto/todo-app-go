@@ -1,1 +1,5 @@
 2025/06/02 06:42:48 main.go:19: test
+2025/06/02 06:55:52 base.go:32: sql: unknown driver "postgres" (forgotten import?)
+2025/06/02 07:07:32 base.go:47: Error creating users table: dial tcp: lookup postgres on 127.0.0.11:53: no such host
+2025/06/02 07:07:32 base.go:50: users table creation attempted.
+2025/06/02 07:13:33 base.go:50: users table creation attempted.
