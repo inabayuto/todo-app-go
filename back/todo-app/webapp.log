@@ -23,3 +23,18 @@
 2025/06/02 11:08:03 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
 2025/06/02 11:08:03 base.go:51: users table creation attempted.
 2025/06/02 11:08:03 base.go:65: todos table creation attempted.
+2025/06/02 11:12:36 base.go:48: Error creating users table: pq: "("またはその近辺で構文エラー
+2025/06/02 11:12:36 base.go:51: users table creation attempted.
+2025/06/02 11:12:36 base.go:65: todos table creation attempted.
+2025/06/02 11:17:37 base.go:51: users table creation attempted.
+2025/06/02 11:17:37 base.go:65: todos table creation attempted.
+2025/06/02 11:17:49 base.go:51: users table creation attempted.
+2025/06/02 11:17:49 base.go:65: todos table creation attempted.
+2025/06/02 11:23:20 base.go:51: users table creation attempted.
+2025/06/02 11:23:20 base.go:65: todos table creation attempted.
+2025/06/02 11:24:37 base.go:51: users table creation attempted.
+2025/06/02 11:24:37 base.go:65: todos table creation attempted.
+2025/06/02 11:26:32 base.go:51: users table creation attempted.
+2025/06/02 11:26:32 base.go:65: todos table creation attempted.
+2025/06/02 11:26:42 base.go:51: users table creation attempted.
+2025/06/02 11:26:42 base.go:65: todos table creation attempted.
