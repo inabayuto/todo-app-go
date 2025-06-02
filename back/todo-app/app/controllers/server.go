@@ -40,6 +40,9 @@ func StartMainServer() error {
 	// ルート ("/") へのリクエストを top ハンドラ関数で処理するように設定
 	http.HandleFunc("/", top)
 
+	// ルート ("/signup") へのリクエストを signup ハンドラ関数で処理するように設定
+	http.HandleFunc("/signup", signup)
+
 	// 指定されたポートで HTTP リクエストのリスニングを開始する
 	log.Printf("Starting server on port %s...", config.Config.Port) // サーバー起動ログを追加
 	return http.ListenAndServe(":"+config.Config.Port, nil)

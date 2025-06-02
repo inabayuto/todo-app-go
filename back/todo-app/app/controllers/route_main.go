@@ -8,6 +8,6 @@ import (
 // top ハンドラは、ルート ("/") への HTTP リクエストを処理
 // テンプレートを使用して HTML レスポンスを生成し、クライアントに返す
 func top(w http.ResponseWriter, r *http.Request) {
-	// generateHTML ヘルパー関数を呼び出して、指定されたテンプレートを描画
-	generateHTML(w, "Hello", "layout", "top")
+	// generateHTML 関数を呼び出して、指定されたテンプレートを描画
+	generateHTML(w, "Hello", "layout", "public_navbar", "top")
 }

@@ -30,9 +30,12 @@ func (u *User) CreateUser() (err error) {
 		time.Now())
 
 	if err != nil {
-		log.Fatalln(err)
+		log.Printf("Error creating user: %v", err)
+		return err
 	}
-	return err
+
+	log.Println("User created successfully.")
+	return nil
 }
 
 func GetUser(id int) (user User, err error) {

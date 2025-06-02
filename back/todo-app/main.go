@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"todo-app/app/models/controllers"
+	"todo-app/app/controllers"
 )
 
 func main() {
