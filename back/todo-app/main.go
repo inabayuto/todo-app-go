@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"todo-app/app/models"
-)
-
 func main() {
 	/*
 		fmt.Println(config.Config.Port)
@@ -19,15 +14,34 @@ func main() {
 		log.Println("test")
 	*/
 	/*
-		fmt.Println(models.Db)
+		// Create User
+			fmt.Println(models.Db)
 
-		u := &models.User{}
-		u.Name = "test"
-		u.Email = "test@example.com"
-		u.PassWord = "4JpRPxcwrATa"
+			u := &models.User{}
+			u.Name = "test"
+			u.Email = "test@example.com"
+			u.PassWord = "4JpRPxcwrATa"
 
-		u.CreateUser()
+			u.CreateUser()
 	*/
-	u, _ := models.GetUser(1)
-	fmt.Println(u)
+	/*
+		// Get User
+			u, _ := models.GetUser(1)
+			fmt.Println(u)
+	*/
+
+	// Update user
+	/*
+		u, _ := models.GetUser(1)
+
+		fmt.Println(u)
+
+		u.Name = "test2"
+		u.Email = "test2@example.com"
+		u.UpdateUser()
+
+		u, _ = models.GetUser(1)
+
+		fmt.Println(u)
+	*/
 }
