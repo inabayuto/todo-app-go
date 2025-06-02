@@ -354,3 +354,9 @@ created by net/http.(*Server).Serve in goroutine 1
 2025/06/02 12:08:47 route_main.go:12: Template parsing error: open app/views/templates/top.html: no such file or directory
 2025/06/02 12:08:48 route_main.go:12: Template parsing error: open app/views/templates/top.html: no such file or directory
 2025/06/02 12:08:49 route_main.go:12: Template parsing error: open app/views/templates/top.html: no such file or directory
+2025/06/02 12:27:20 route_main.go:12: Template parsing error: template: top.html:22: unexpected {{end}}
+2025/06/02 12:27:21 route_main.go:12: Template parsing error: template: top.html:22: unexpected {{end}}
+2025/06/02 12:27:21 route_main.go:12: Template parsing error: template: top.html:22: unexpected {{end}}
+2025/06/02 12:27:21 route_main.go:12: Template parsing error: template: top.html:22: unexpected {{end}}
+2025/06/02 12:27:22 route_main.go:12: Template parsing error: template: top.html:22: unexpected {{end}}
+2025/06/02 12:27:22 route_main.go:12: Template parsing error: template: top.html:22: unexpected {{end}}
