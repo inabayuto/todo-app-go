@@ -1,6 +1,17 @@
 package main
 
+import (
+	"log"
+	"todo-app/app/models/controllers"
+)
+
 func main() {
+
+	err := controllers.StartMainServer()
+	if err != nil {
+		log.Println(err)
+	}
+
 	/*
 		fmt.Println(config.Config.Port)
 		fmt.Println(config.Config.SQLDriver)

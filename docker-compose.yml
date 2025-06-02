@@ -11,6 +11,7 @@ services:
       dockerfile: ./docker/go/Dockerfile
     ports:
       - "2345:2345" #delve用のポート
+      - "8080:8080" #Webサーバー用のポートを追加
     volumes:
       - ./back:/go/src/app
     networks:
