@@ -92,16 +92,20 @@ func (t *Todo) UpdateTodo() error {
 	where id = $3`
 	_, err = Db.Exec(cmd, t.Content, t.UserID, t.ID)
 	if err != nil {
-		log.Fatalln(err)
+		log.Printf("Error updating todo (ID %d): %v", t.ID, err)
+		return err
 	}
-	return err
+	log.Printf("Successfully updated todo (ID %d)", t.ID)
+	return nil
 }
 
 func (t *Todo) DeleteTodo() error {
 	cmd := `delete from todos where id = $1`
 	_, err = Db.Exec(cmd, t.ID)
 	if err != nil {
-		log.Fatalln(err)
+		log.Printf("Error deleting todo (ID %d): %v", t.ID, err)
+		return err
 	}
-	return err
+	log.Printf("Successfully deleted todo (ID %d)", t.ID)
+	return nil
 }

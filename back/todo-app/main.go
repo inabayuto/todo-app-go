@@ -1,6 +1,16 @@
 package main
 
+import (
+	"log"
+	"todo-app/app/controllers"
+)
+
 func main() {
+	err := controllers.StartMainServer()
+	if err != nil {
+		log.Println(err)
+	}
+
 	/*
 		fmt.Println(config.Config.Port)
 		fmt.Println(config.Config.SQLDriver)
@@ -95,6 +105,23 @@ func main() {
 		// Delete Todo
 		t, _ := models.GetTodo(3)
 		t.DeleteTodo()
+	*/
+
+	/*
+		// Get User By Email
+		user, _ := models.GetUserByEmail("yuto.1028.onepiece@gmail.com")
+		fmt.Println(user)
+
+		// Create Session
+		session, err := user.CreateSession()
+		if err != nil {
+			log.Println(err)
+		}
+		fmt.Println(session)
+
+		// Check Session
+		valid, _ := session.CheckSession()
+		fmt.Println(valid)
 	*/
 
 }
