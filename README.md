@@ -29,7 +29,7 @@
     実行中のアプリケーションサーバーコンテナのシェルには、以下のコマンドでアクセスできます。
 
     ```bash
-    docker exec -it api-server /bin/sh
+    docker exec -it todo-app-go /bin/sh
     ```
 
     データベースコンテナ内のPostgreSQLデータベースに `psql` を使用して接続するには、以下のコマンドを使用します。
