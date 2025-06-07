@@ -32,7 +32,6 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 	}
 
 	log.Println("generateHTML: Template parsing successful. Executing template with data.")
-
 	// レイアウトテンプレートを基にデータを適用し、レスポンスライターに書き出し
 	// ここで "layout" という名前のテンプレートがテンプレートセット内に存在する必要
 	err = templates.ExecuteTemplate(w, "layout", data)

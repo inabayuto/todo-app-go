@@ -2214,3 +2214,33 @@ created by net/http.(*Server).Serve in goroutine 1
 2025/06/02 18:08:15 server.go:23: generateHTML: Attempting to parse template files: [app/views/templates/layout.html app/views/templates/private_navbar.html app/views/templates/index.html]
 2025/06/02 18:08:15 server.go:33: generateHTML: Template parsing successful. Executing template with data.
 2025/06/02 18:08:15 server.go:42: generateHTML: Template executed successfully.
+2025/06/07 00:52:23 base.go:51: Database connection established successfully!
+2025/06/07 00:52:23 base.go:101: sessions table creation attempted.
+2025/06/07 00:52:23 server.go:116: Starting server on port 8080...
+2025/06/07 00:52:43 route_main.go:25: index handler started
+2025/06/07 00:52:43 route_main.go:31: index handler: session found
+2025/06/07 00:52:43 route_main.go:38: index handler: User object before passing to template: {ID:4 UUID:a6c88893-3fc3-11f0-a275-065ce658a5df Name:inabayuto Email:yuto.1028.onepiece@gmail.com PassWord: CreatedAt:2025-06-02 15:09:59.784306 +0000 +0000 Todos:[{ID:6 Content:todos 66 UserID:4 CreatedAt:2025-06-02 17:48:30.527436 +0000 +0000}]}
+2025/06/07 00:52:43 server.go:23: generateHTML: Attempting to parse template files: [app/views/templates/layout.html app/views/templates/private_navbar.html app/views/templates/index.html]
+2025/06/07 00:52:43 server.go:34: generateHTML: Template parsing successful. Executing template with data.
+2025/06/07 00:52:43 server.go:43: generateHTML: Template executed successfully.
+2025/06/07 00:52:43 route_main.go:25: index handler started
+2025/06/07 00:52:43 route_main.go:31: index handler: session found
+2025/06/07 00:52:43 route_main.go:38: index handler: User object before passing to template: {ID:4 UUID:a6c88893-3fc3-11f0-a275-065ce658a5df Name:inabayuto Email:yuto.1028.onepiece@gmail.com PassWord: CreatedAt:2025-06-02 15:09:59.784306 +0000 +0000 Todos:[{ID:6 Content:todos 66 UserID:4 CreatedAt:2025-06-02 17:48:30.527436 +0000 +0000}]}
+2025/06/07 00:52:43 server.go:23: generateHTML: Attempting to parse template files: [app/views/templates/layout.html app/views/templates/private_navbar.html app/views/templates/index.html]
+2025/06/07 00:52:43 server.go:34: generateHTML: Template parsing successful. Executing template with data.
+2025/06/07 00:52:43 server.go:43: generateHTML: Template executed successfully.
+2025/06/07 00:52:50 base.go:51: Database connection established successfully!
+2025/06/07 00:52:50 base.go:101: sessions table creation attempted.
+2025/06/07 00:52:50 server.go:116: Starting server on port 8080...
+2025/06/07 01:46:01 route_main.go:25: index handler started
+2025/06/07 01:46:02 route_main.go:31: index handler: session found
+2025/06/07 01:46:02 route_main.go:38: index handler: User object before passing to template: {ID:4 UUID:a6c88893-3fc3-11f0-a275-065ce658a5df Name:inabayuto Email:yuto.1028.onepiece@gmail.com PassWord: CreatedAt:2025-06-02 15:09:59.784306 +0000 +0000 Todos:[{ID:6 Content:todos 66 UserID:4 CreatedAt:2025-06-02 17:48:30.527436 +0000 +0000}]}
+2025/06/07 01:46:02 server.go:23: generateHTML: Attempting to parse template files: [app/views/templates/layout.html app/views/templates/private_navbar.html app/views/templates/index.html]
+2025/06/07 01:46:02 server.go:34: generateHTML: Template parsing successful. Executing template with data.
+2025/06/07 01:46:02 server.go:43: generateHTML: Template executed successfully.
+2025/06/07 01:46:02 route_main.go:25: index handler started
+2025/06/07 01:46:02 route_main.go:31: index handler: session found
+2025/06/07 01:46:02 route_main.go:38: index handler: User object before passing to template: {ID:4 UUID:a6c88893-3fc3-11f0-a275-065ce658a5df Name:inabayuto Email:yuto.1028.onepiece@gmail.com PassWord: CreatedAt:2025-06-02 15:09:59.784306 +0000 +0000 Todos:[{ID:6 Content:todos 66 UserID:4 CreatedAt:2025-06-02 17:48:30.527436 +0000 +0000}]}
+2025/06/07 01:46:02 server.go:23: generateHTML: Attempting to parse template files: [app/views/templates/layout.html app/views/templates/private_navbar.html app/views/templates/index.html]
+2025/06/07 01:46:02 server.go:34: generateHTML: Template parsing successful. Executing template with data.
+2025/06/07 01:46:02 server.go:43: generateHTML: Template executed successfully.
